@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>windows 12</title>
+    <title>Windows 2024</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/start.css">
     <link rel="stylesheet" href="styles/windows.css">
@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="styles/settings.css">
     <link rel="stylesheet" href="styles/widgets.css">
     <link rel="stylesheet" href="styles/notepad.css">
+    <link rel="stylesheet" href="styles/cmd.css">
+    <link rel="stylesheet" href="styles/browser.css">
     <!--  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +24,28 @@
 <body>
     <main id="main">
         <div class="desktop">
+            <div class="window draggable" id="cmd">
+                <header class="header" id="cmd-header">
+                    <span>Cmd</span>
+                    <div class="tools">
+                        <span class="close" id="cmd-close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </span>
+                        <span class="window-maxmize-btn" id="cmd-maxmize">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+                    </div>
+                </header>
+                <div class="body">
+                    <div class="cmd-output" id="cmd-output">
+                        <p style="margin-bottom: 20px;">write <code>cmd help</code> for help ;D</p>
+                    </div>
+                    <div class="cmd-input">
+                        <p><span style='color:#0085ff;'>c:\users\user1\apps\&gt;</span></p>
+                        <div><span>$&nbsp;</span><input type="text" id="cmd-input" spellcheck="false"/></div>
+                    </div>
+                </div>
+            </div>
             <div class="window draggable" id="browser">
                 <header class="header" id="browser-header">
                     <span>Browser</span>
@@ -35,7 +59,12 @@
                     </div>
                 </header>
                 <div class="body">
-                    hi
+                    <div class="browser-search">
+                        <input type="text" id="browser-search" placeholder="search.. ">
+                    </div>
+                    <div class="iframe">
+                        <iframe id="browser-iframe" src="https://www.google.com?igu=1" frameborder="0"></iframe>
+                    </div>
                 </div>
             </div>
             <div class="window draggable" id="notepad">
@@ -143,7 +172,7 @@
                                 
 
                                 <div class="bg">
-                                    <input onchange="uploadBG()" class="file-input" type="file" id="custom-bg">
+                                    <input onchange="uploadBG()" class="file-input" type="file" accept="image/*" id="custom-bg">
                                     <label class="file-label" for="custom-bg">upload file</label>
                                 </div>
                             </div>
@@ -331,6 +360,7 @@
                 <div class="apps container">
                     <ul>
                         <li title="files" class="window-open-btn" id="files-open"><img alt="files" src="media/files.png" ></li>
+                        <li title="cmd" class="window-open-btn" id="cmd-open"><img alt="cmd" src="media/cmd.png" ></li>
                         <li title="browser" class="window-open-btn" id="browser-open"><img alt="browser" src="media/browser.svg" ></li>
                         <li title="notepad" class="window-open-btn" id="notepad-open"><img alt="notepad" src="media/notepad.png" ></li>
                     </ul>
@@ -375,5 +405,7 @@
     <script src="scripts/start.js"></script>
     <script src="scripts/bg.js"></script>
     <script src="scripts/tools-section.js"></script>
+    <script src="scripts/browser.js"></script>
+    <script src="scripts/cmd.js"></script>
 </body>
 </html>

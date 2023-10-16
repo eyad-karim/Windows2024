@@ -37,6 +37,13 @@ let notepadTextsizeValue = document.getElementById("notepad-textsize-value");
 let notepadTextcolor = document.getElementById("notepad-textcolor");
 let notepadTextarea = document.getElementById("notepad-textarea");
 
+let cmdBody = document.querySelector("#cmd .body");
+let cmdInput = document.getElementById("cmd-input");
+let cmdOutput = document.getElementById("cmd-output");
+
+let browserSearch = document.getElementById("browser-search");
+let browserIframe = document.getElementById("browser-iframe");
+
 function formatAMPM(date) {
   var hours = date.getHours();
   var minutes = date.getMinutes();

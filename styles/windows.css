@@ -15,9 +15,9 @@
     z-index: 50;
     resize: both;
     border: 1.5px solid rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     background-color: #f1f1f1;
+    left: 20%;
+    top: 10%;
 }
 
 .window.open-window{
@@ -27,7 +27,7 @@
 .window.maxmize-window {
     transition-duration: 0.3s;
     width: 100% !important;
-    height: calc(100% - 60px) !important;
+    height: calc(100% - 20px) !important;
     top: 0 !important;
     left: 0 !important;
     resize: none;
@@ -71,11 +71,9 @@
 .window > .header > .tools > span {
     width: 35px;
     height: 35px;
-    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition-duration: 0.3s;
     cursor: pointer;
     color: #0085ff;
     border: 1px solid transparent;
@@ -99,8 +97,8 @@
     right: 0;
     bottom: 0;
     margin: 10px;
+    margin-top: 0;
     padding: 10px;
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 5px;
 }
